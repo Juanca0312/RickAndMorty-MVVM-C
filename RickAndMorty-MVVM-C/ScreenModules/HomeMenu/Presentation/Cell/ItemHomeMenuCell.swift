@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ItemHomeMenuCell: UICollectionViewCell, Reusable {    
+final class ItemHomeMenuCell: UICollectionViewCell, Reusable {
     private let mainContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGroupedBackground
@@ -16,10 +16,10 @@ final class ItemHomeMenuCell: UICollectionViewCell, Reusable {
         return view
     }()
     
-    private let characterImage: UIImageView = {
+    private let menuImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(resource: .default)
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
@@ -44,8 +44,8 @@ final class ItemHomeMenuCell: UICollectionViewCell, Reusable {
         addSubview(mainContainer)
         
         mainContainer.fillSuperView(widthPadding: 10)
-        mainContainer.addSubview(characterImage)
-        characterImage.fillSuperView()
+        mainContainer.addSubview(menuImageView)
+        menuImageView.fillSuperView()
         
         configTitleGradient()
         
@@ -69,6 +69,11 @@ final class ItemHomeMenuCell: UICollectionViewCell, Reusable {
         ]
         gradientMaskLayer.locations = [0.6, 0.9]
         mainContainer.layer.addSublayer(gradientMaskLayer)
+    }
+    
+    func configData(viewModel: ItemHomeMenuViewModel) {
+        titleLabel.text = viewModel.title
+        menuImageView.image = UIImage(named: viewModel.imageName)
     }
 }
 
