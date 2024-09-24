@@ -41,7 +41,7 @@ final class HomeMenuViewModelImpl: HomeMenuViewModel {
         }
     }
     
-    // We can use @MainActor insted of 
+    // We can use @MainActor insted of .receive(on: RunLoop.main)
     private func updateUI(result: Result<[MenuItem], any Error>) {
         switch result {
         case .success(let items):

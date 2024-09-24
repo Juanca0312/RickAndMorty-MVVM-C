@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		356A4A422CA1DC05009A9520 /* ApiClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A4A412CA1DC05009A9520 /* ApiClientService.swift */; };
+		356A4A452CA20A0B009A9520 /* ApiClientServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A4A442CA20A0B009A9520 /* ApiClientServiceImpl.swift */; };
+		356A4A482CA21065009A9520 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A4A472CA21065009A9520 /* ApiError.swift */; };
+		356A4A4B2CA21390009A9520 /* HttpResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A4A4A2CA21390009A9520 /* HttpResponseStatus.swift */; };
 		35CEEA0E2C9494DF0096B2A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CEEA0D2C9494DF0096B2A6 /* AppDelegate.swift */; };
 		35CEEA102C9494DF0096B2A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CEEA0F2C9494DF0096B2A6 /* SceneDelegate.swift */; };
 		35CEEA122C9494DF0096B2A6 /* HomeMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CEEA112C9494DF0096B2A6 /* HomeMenuController.swift */; };
@@ -30,6 +34,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		356A4A412CA1DC05009A9520 /* ApiClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientService.swift; sourceTree = "<group>"; };
+		356A4A442CA20A0B009A9520 /* ApiClientServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientServiceImpl.swift; sourceTree = "<group>"; };
+		356A4A472CA21065009A9520 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		356A4A4A2CA21390009A9520 /* HttpResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseStatus.swift; sourceTree = "<group>"; };
 		35CEEA0A2C9494DF0096B2A6 /* RickAndMorty-MVVM-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RickAndMorty-MVVM-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CEEA0D2C9494DF0096B2A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35CEEA0F2C9494DF0096B2A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +73,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		356A4A3F2CA1D13E009A9520 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35CEEA112C9494DF0096B2A6 /* HomeMenuController.swift */,
+				35CEEA5E2C953BA00096B2A6 /* HomeMenuViewModel.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		356A4A402CA1DA43009A9520 /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				356A4A412CA1DC05009A9520 /* ApiClientService.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		356A4A432CA209FF009A9520 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				356A4A442CA20A0B009A9520 /* ApiClientServiceImpl.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		356A4A462CA2105B009A9520 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				356A4A472CA21065009A9520 /* ApiError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		356A4A492CA21381009A9520 /* StatusResponse */ = {
+			isa = PBXGroup;
+			children = (
+				356A4A4A2CA21390009A9520 /* HttpResponseStatus.swift */,
+			);
+			path = StatusResponse;
+			sourceTree = "<group>";
+		};
 		35CEEA012C9494DF0096B2A6 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +191,10 @@
 		35CEEA252C94ABE80096B2A6 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				356A4A492CA21381009A9520 /* StatusResponse */,
+				356A4A462CA2105B009A9520 /* Error */,
+				356A4A432CA209FF009A9520 /* Implementations */,
+				356A4A402CA1DA43009A9520 /* ApiService */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -339,9 +392,8 @@
 		35CEEA4E2C9539260096B2A6 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				356A4A3F2CA1D13E009A9520 /* Controller */,
 				35CEEA5D2C953B850096B2A6 /* Cell */,
-				35CEEA112C9494DF0096B2A6 /* HomeMenuController.swift */,
-				35CEEA5E2C953BA00096B2A6 /* HomeMenuViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -479,7 +531,9 @@
 				35CEEA432C94B0E30096B2A6 /* AppFactory.swift in Sources */,
 				35CEEA5C2C953AE10096B2A6 /* LoadMenuUseCase.swift in Sources */,
 				35CEEA4D2C94EFB30096B2A6 /* Reusable.swift in Sources */,
+				356A4A4B2CA21390009A9520 /* HttpResponseStatus.swift in Sources */,
 				35CEEA3E2C94B05E0096B2A6 /* Coordinator.swift in Sources */,
+				356A4A452CA20A0B009A9520 /* ApiClientServiceImpl.swift in Sources */,
 				35CEEA5F2C953BA00096B2A6 /* HomeMenuViewModel.swift in Sources */,
 				35CEEA4B2C94EE2D0096B2A6 /* UIView+Extensions.swift in Sources */,
 				35CEEA612C953BE70096B2A6 /* StateController.swift in Sources */,
@@ -488,11 +542,13 @@
 				35CEEA562C9539B20096B2A6 /* MenuItem.swift in Sources */,
 				35CEEA122C9494DF0096B2A6 /* HomeMenuController.swift in Sources */,
 				35CEEA0E2C9494DF0096B2A6 /* AppDelegate.swift in Sources */,
+				356A4A482CA21065009A9520 /* ApiError.swift in Sources */,
 				35CEEA632C953C710096B2A6 /* ItemHomeMenuViewModel.swift in Sources */,
 				35CEEA472C94B3B30096B2A6 /* HomeFactory.swift in Sources */,
 				35CEEA452C94B37D0096B2A6 /* HomeCoordinator.swift in Sources */,
 				35CEEA492C94ED5C0096B2A6 /* ItemHomeMenuCell.swift in Sources */,
 				35CEEA102C9494DF0096B2A6 /* SceneDelegate.swift in Sources */,
+				356A4A422CA1DC05009A9520 /* ApiClientService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
