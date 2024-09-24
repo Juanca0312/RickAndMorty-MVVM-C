@@ -11,6 +11,10 @@
 		356A4A452CA20A0B009A9520 /* ApiClientServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A4A442CA20A0B009A9520 /* ApiClientServiceImpl.swift */; };
 		356A4A482CA21065009A9520 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A4A472CA21065009A9520 /* ApiError.swift */; };
 		356A4A4B2CA21390009A9520 /* HttpResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A4A4A2CA21390009A9520 /* HttpResponseStatus.swift */; };
+		356A4A4F2CA32DF8009A9520 /* MenuDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A4A4E2CA32DF8009A9520 /* MenuDTO.swift */; };
+		356A4A512CA32F11009A9520 /* MenuDTO+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A4A502CA32F11009A9520 /* MenuDTO+Mapper.swift */; };
+		356A4A532CA33557009A9520 /* PropertyIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A4A522CA33557009A9520 /* PropertyIterator.swift */; };
+		356A4A552CA33852009A9520 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356A4A542CA33852009A9520 /* Endpoint.swift */; };
 		35CEEA0E2C9494DF0096B2A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CEEA0D2C9494DF0096B2A6 /* AppDelegate.swift */; };
 		35CEEA102C9494DF0096B2A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CEEA0F2C9494DF0096B2A6 /* SceneDelegate.swift */; };
 		35CEEA122C9494DF0096B2A6 /* HomeMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35CEEA112C9494DF0096B2A6 /* HomeMenuController.swift */; };
@@ -38,6 +42,10 @@
 		356A4A442CA20A0B009A9520 /* ApiClientServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientServiceImpl.swift; sourceTree = "<group>"; };
 		356A4A472CA21065009A9520 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		356A4A4A2CA21390009A9520 /* HttpResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseStatus.swift; sourceTree = "<group>"; };
+		356A4A4E2CA32DF8009A9520 /* MenuDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDTO.swift; sourceTree = "<group>"; };
+		356A4A502CA32F11009A9520 /* MenuDTO+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuDTO+Mapper.swift"; sourceTree = "<group>"; };
+		356A4A522CA33557009A9520 /* PropertyIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyIterator.swift; sourceTree = "<group>"; };
+		356A4A542CA33852009A9520 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		35CEEA0A2C9494DF0096B2A6 /* RickAndMorty-MVVM-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RickAndMorty-MVVM-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CEEA0D2C9494DF0096B2A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35CEEA0F2C9494DF0096B2A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +120,15 @@
 				356A4A4A2CA21390009A9520 /* HttpResponseStatus.swift */,
 			);
 			path = StatusResponse;
+			sourceTree = "<group>";
+		};
+		356A4A4C2CA32DDC009A9520 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+				356A4A4E2CA32DF8009A9520 /* MenuDTO.swift */,
+				356A4A502CA32F11009A9520 /* MenuDTO+Mapper.swift */,
+			);
+			path = Dto;
 			sourceTree = "<group>";
 		};
 		35CEEA012C9494DF0096B2A6 = {
@@ -195,6 +212,7 @@
 				356A4A462CA2105B009A9520 /* Error */,
 				356A4A432CA209FF009A9520 /* Implementations */,
 				356A4A402CA1DA43009A9520 /* ApiService */,
+				356A4A542CA33852009A9520 /* Endpoint.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -304,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				35CEEA4C2C94EFB30096B2A6 /* Reusable.swift */,
+				356A4A522CA33557009A9520 /* PropertyIterator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -401,6 +420,7 @@
 		35CEEA4F2C9539520096B2A6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				356A4A4C2CA32DDC009A9520 /* Dto */,
 				35CEEA572C953A7E0096B2A6 /* Repositories */,
 			);
 			path = Data;
@@ -543,12 +563,16 @@
 				35CEEA122C9494DF0096B2A6 /* HomeMenuController.swift in Sources */,
 				35CEEA0E2C9494DF0096B2A6 /* AppDelegate.swift in Sources */,
 				356A4A482CA21065009A9520 /* ApiError.swift in Sources */,
+				356A4A552CA33852009A9520 /* Endpoint.swift in Sources */,
 				35CEEA632C953C710096B2A6 /* ItemHomeMenuViewModel.swift in Sources */,
+				356A4A532CA33557009A9520 /* PropertyIterator.swift in Sources */,
 				35CEEA472C94B3B30096B2A6 /* HomeFactory.swift in Sources */,
 				35CEEA452C94B37D0096B2A6 /* HomeCoordinator.swift in Sources */,
+				356A4A512CA32F11009A9520 /* MenuDTO+Mapper.swift in Sources */,
 				35CEEA492C94ED5C0096B2A6 /* ItemHomeMenuCell.swift in Sources */,
 				35CEEA102C9494DF0096B2A6 /* SceneDelegate.swift in Sources */,
 				356A4A422CA1DC05009A9520 /* ApiClientService.swift in Sources */,
+				356A4A4F2CA32DF8009A9520 /* MenuDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

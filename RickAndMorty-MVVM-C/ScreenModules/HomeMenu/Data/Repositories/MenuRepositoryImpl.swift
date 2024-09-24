@@ -8,8 +8,13 @@
 import Foundation
 
 struct MenuRepositoryImpl: MenuRepository {
+    
+    let apiClientService: ApiClientService
+    let urlString: String
+    
     func fetchMenuData() async throws -> [MenuItem] {
-        [MenuItem(title: "locations", url: "nada")]
+        let url = URL(string: urlString)
+        return try await apiClientService.request(url: url, type: MenuDTO.self).toDomain()
     }
     
 }
