@@ -10,6 +10,10 @@ import Combine
 
 protocol HomeFactory {
     func makeModule(coordinator: HomeMenuControllerCoordinator) -> UIViewController
+    func makeCharactersCoordinator(
+        navigation: UINavigationController,
+        urlList: String
+    ) -> Coordinator
 }
 
 struct HomeFactoryImpl: HomeFactory {
@@ -42,5 +46,14 @@ struct HomeFactoryImpl: HomeFactory {
             right: ViewValues.normalPadding
         )
         return layout
+    }
+    
+    func makeCharactersCoordinator(
+        navigation: UINavigationController,
+        urlList: String
+    ) -> Coordinator {
+        let charactersFactory = CharactersFactoryImpl()
+        let characterCoordinator = CharacterCoordinator(navigation: navigation, charactersFactory: charactersFactory)
+        return characterCoordinator
     }
 }
