@@ -11,7 +11,7 @@ final class ItemHomeMenuCell: UICollectionViewCell, Reusable {
     private let mainContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGroupedBackground
-        view.layer.cornerRadius = 10
+        view.layer.cornerRadius = ViewValues.defaultCornerRadius
         view.layer.masksToBounds = true // cuts image to corners
         return view
     }()
@@ -27,7 +27,6 @@ final class ItemHomeMenuCell: UICollectionViewCell, Reusable {
         let label = UILabel()
         label.textColor = .white
         label.font = UIFont.preferredFont(forTextStyle: .headline)
-        label.text = "Category"
         return label
     }()
     
@@ -43,7 +42,7 @@ final class ItemHomeMenuCell: UICollectionViewCell, Reusable {
     private func setupUI() {
         addSubview(mainContainer)
         
-        mainContainer.fillSuperView(widthPadding: 10)
+        mainContainer.fillSuperView(widthPadding: ViewValues.normalPadding)
         mainContainer.addSubview(menuImageView)
         menuImageView.fillSuperView()
         
@@ -54,9 +53,9 @@ final class ItemHomeMenuCell: UICollectionViewCell, Reusable {
             right: mainContainer.rightAnchor,
             bottom: mainContainer.bottomAnchor,
             left: mainContainer.leftAnchor,
-            pRight: 10,
-            pBottom: 10,
-            pLeft: 10
+            pRight: ViewValues.normalPadding,
+            pBottom: ViewValues.normalPadding,
+            pLeft: ViewValues.normalPadding
         )
     }
     
@@ -67,7 +66,10 @@ final class ItemHomeMenuCell: UICollectionViewCell, Reusable {
             UIColor.clear.cgColor,
             UIColor.darkGray.cgColor
         ]
-        gradientMaskLayer.locations = [0.6, 0.9]
+        gradientMaskLayer.locations = [
+            ViewValues.gradientTitleInit,
+            ViewValues.gradientTitleEnd
+        ]
         mainContainer.layer.addSublayer(gradientMaskLayer)
     }
     
